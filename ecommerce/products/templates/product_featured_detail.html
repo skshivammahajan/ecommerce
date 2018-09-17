@@ -1,0 +1,7 @@
+<h1>Product Detail</h1>
+{{object}}
+{{object.title}} <br/>
+{{object.description}}<br/>
+{% if object.image%}
+    <img src="{{ object.image.url }}" class="image-fluid">
+{ endif }
