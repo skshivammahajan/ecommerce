@@ -97,3 +97,8 @@ class ProductFeaturedDetailView(DetailView):
 
     def get_queryset(self, *args, **kwargs):
         return Product.objects.features(id=self.kwargs.get("pk"))
+
+
+class ProductSlugDetailView(DetailView):
+    queryset = Product.objects.all()
+    template_name = "product_detail.html"
