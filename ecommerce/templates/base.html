@@ -12,8 +12,8 @@
   </head>
 
   <body>
-{%block content%}
-{%endblock%}
+  {% include 'base/navbar.html'  with brand_name="Ecommerce"%}
+{%block content%} {%endblock%}
 
   {% include 'base/js.html'%}
   </body>
