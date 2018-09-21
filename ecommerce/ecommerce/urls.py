@@ -24,12 +24,12 @@ from products.views import ProductListView, product_list_view, product_detail_vi
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-    path(r'', home),
-path(r'about/', about),
-path(r'contact/', contact),
-path(r'login/', login_user),
-path(r'register/', register_user),
-path('product/', include('products.urls')),
+    path(r'', home, name="home"),
+    path(r'about/', about, name="about"),
+    path(r'contact/', contact, name="contact"),
+    path(r'login/', login_user, name="login"),
+    path(r'register/', register_user, name="register"),
+    path('product/', include('products.urls')),
 # path(r'products/', ProductListView.as_view()),
 # path(r'products-fbv/', product_list_view),
 # path(r'product-detail/(?P<pk>\d+)/$', ProductListView.as_view()),

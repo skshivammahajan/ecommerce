@@ -3,7 +3,7 @@ from . import views
 
 app_name = 'products'
 urlpatterns = [
-    path('products/', views.ProductListView.as_view()),
+    path('products/', views.ProductListView.as_view(), name="list"),
     path('products-fbv/', views.product_list_view,),
     # re_path(r'^product-detail/(?P<pk>\d+)/$', views.ProductDetailView.as_view()),
     re_path(r'^product-detail/(?P<slug>[\w-]+)/$', views.ProductSlugDetailView.as_view(), name='detail'),
