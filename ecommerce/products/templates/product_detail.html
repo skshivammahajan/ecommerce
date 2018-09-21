@@ -1,5 +1,16 @@
-<h1>Product Detail</h1>
-{{object}}
-{{object.title}} <br/>
-{{object.description}}<br/>
-<img src="{{ object.image.url }}" class="image-fluid">
+{%extends "base.html"%}
+
+{%block content%}
+<div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>{{object.title}} </h1>
+                <b>{{ object.timestamp | timesince }} ago</b>
+                {{object.description| linebreaks}}<br/>
+                {% if object.image %}
+                    <img src="{{ object.image.url }}" class="image-fluid">
+                {% endif %}
+            </div>
+        </div>
+</div>
+{% endblock %}

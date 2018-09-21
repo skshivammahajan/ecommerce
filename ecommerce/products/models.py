@@ -46,6 +46,7 @@ class Product(models.Model):
     price = models.DecimalField(decimal_places = 10, max_digits = 20)
     image = models.ImageField(upload_to = upload_image_path, null = True, blank = True)
     featured = models.BooleanField(default = False)
+    timestamp = models.DateTimeField(auto_now_add = True)
 
     objects = ProductManager()
 
